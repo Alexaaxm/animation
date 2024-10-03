@@ -4,7 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Animation</title>
+    <script
+      src="https://kit.fontawesome.com/f207512997.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="./assets/css/style.css" />
+
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("open-menu").addEventListener("click", () => {
@@ -37,10 +42,21 @@
             <div class="close-line"></div>
             <div class="close-line"></div>
           </button>
-          <li><a class="menu-item" href="#">Inicio</a></li>
-          <li><a class="menu-item" href="#">catalogo</a></li>
-          <li><a class="menu-item" href="#">Ofertas</a></li>
-          <li><a class="menu-item" href="#">Contacto</a></li>
+          <li>
+            <a class="menu-item" href="#for-sale"
+              ><i class="fa-duotone fa-solid fa-house"></i>En venta</a
+            >
+          </li>
+          <li>
+            <a class="menu-item" href="#for-rent"
+              ><i class="fa-regular fa-image"></i>Arriendos</a
+            >
+          </li>
+          <li>
+            <a class="menu-item" href="#footer">
+              <i class="fa-regular fa-user"></i> Contacto</a
+            >
+          </li>
         </ul>
       </header>
       <nav class="form">
@@ -51,112 +67,276 @@
           <option value="value3">Value 3</option>
         </select>
       </nav>
-      <main class="main-container">
+      <main class="main-container section-container">
+        <h2>Destacados</h2>
+        <div class="product-container section-container-featured">
+          <div class="scroller">
+            <div class="column">
+              <div class="catalog-container">
+                <img
+                  src="/assets/img/casas/images (15).jpeg"
+                  alt="perrito"
+                  class="product-image"
+                />
+                <p>Kobe</p>
+              </div>
+            </div>
+            <div class="column">
+              <div class="catalog-container">
+                <img
+                  src="/assets/img/casas/images (14).jpeg"
+                  alt="perrito"
+                  class="product-image"
+                />
+                <p>Kobe</p>
+              </div>
+            </div>
+            <div class="column">
+              <div class="catalog-container">
+                <img
+                  src="/assets/img/casas/images (13).jpeg"
+                  alt="perrito"
+                  class="product-image"
+                />
+                <p>Kobe</p>
+              </div>
+            </div>
+            <div class="column">
+              <div class="catalog-container">
+                <img
+                  src="/assets/img/casas/images (12).jpeg"
+                  alt="perrito"
+                  class="product-image"
+                />
+                <p>Kobe</p>
+              </div>
+            </div>
+            <div class="column">
+              <div class="catalog-container">
+                <img
+                  src="/assets/img/casas/images (11).jpeg"
+                  alt="perrito"
+                  class="product-image"
+                />
+                <p>Kobe</p>
+              </div>
+            </div>
+            <div class="column">
+              <div class="catalog-container">
+                <img
+                  src="/assets/img/casas/images (10).jpeg"
+                  alt="perrito"
+                  class="product-image"
+                />
+                <p>Kobe</p>
+              </div>
+            </div>
+            <div class="column">
+              <div class="catalog-container">
+                <img
+                  src="/assets/img/casas/images (9).jpeg"
+                  alt="perrito"
+                  class="product-image"
+                />
+                <p>Kobe</p>
+              </div>
+            </div>
+            <div class="column">
+              <div class="catalog-container">
+                <img
+                  src="/assets/img/casas/images (3).jpeg"
+                  alt="perrito"
+                  class="product-image"
+                />
+                <p>Kobe</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h2 id="for-sale">Casas a la venta</h2>
         <div class="product-container">
           <div class="column">
             <div class="catalog-container">
               <img
-                src="/assets/img/unnamed.jpg"
+                src="/assets/img/casas/images.jpeg"
                 alt="perrito"
                 class="product-image"
               />
-              <p>perrito bonito</p>
-              <button type="button">Ver más</button>
+              <p>Kobe</p>
             </div>
           </div>
           <div class="column">
             <div class="catalog-container">
               <img
-                src="/assets/img/unnamed.jpg"
+                src="/assets/img/casas/images (9).jpeg"
                 alt="perrito"
                 class="product-image"
               />
-              <p>perrito bonito</p>
-              <button type="button">Ver más</button>
+              <p>Kobe</p>
             </div>
           </div>
           <div class="column">
             <div class="catalog-container">
               <img
-                src="/assets/img/unnamed.jpg"
+                src="/assets/img/casas/images (8).jpeg"
                 alt="perrito"
                 class="product-image"
               />
-              <p>perrito bonito</p>
-              <button type="button">Ver más</button>
+              <p>Kobe</p>
             </div>
           </div>
           <div class="column">
             <div class="catalog-container">
               <img
-                src="/assets/img/unnamed.jpg"
+                src="/assets/img/casas/images (7).jpeg"
                 alt="perrito"
                 class="product-image"
               />
-              <p>perrito bonito</p>
-              <button type="button">Ver más</button>
+              <p>Kobe</p>
             </div>
           </div>
           <div class="column">
             <div class="catalog-container">
               <img
-                src="/assets/img/unnamed.jpg"
+                src="/assets/img/casas/images (5).jpeg"
                 alt="perrito"
                 class="product-image"
               />
-              <p>perrito bonito</p>
-              <button type="button">Ver más</button>
+              <p>Kobe</p>
             </div>
           </div>
           <div class="column">
             <div class="catalog-container">
               <img
-                src="/assets/img/unnamed.jpg"
+                src="/assets/img/casas/images (6).jpeg"
                 alt="perrito"
                 class="product-image"
               />
-              <p>perrito bonito</p>
-              <button type="button">Ver más</button>
+              <p>Kobe</p>
             </div>
           </div>
           <div class="column">
             <div class="catalog-container">
               <img
-                src="/assets/img/unnamed.jpg"
+                src="/assets/img/casas/images (4).jpeg"
                 alt="perrito"
                 class="product-image"
               />
-              <p>perrito bonito</p>
-              <button type="button">Ver más</button>
+              <p>Kobe</p>
             </div>
           </div>
           <div class="column">
             <div class="catalog-container">
               <img
-                src="/assets/img/unnamed.jpg"
+                src="/assets/img/casas/images (3).jpeg"
                 alt="perrito"
                 class="product-image"
               />
-              <p>perrito bonito</p>
-              <button type="button">Ver más</button>
+              <p>Kobe</p>
+            </div>
+          </div>
+        </div>
+        <h2 id="for-rent">Casas en arriendo</h2>
+        <div class="product-container section-container">
+          <div class="column">
+            <div class="catalog-container">
+              <img
+                src="/assets/img/casas/images (15).jpeg"
+                alt="perrito"
+                class="product-image"
+              />
+              <p>Kobe</p>
+            </div>
+          </div>
+          <div class="column">
+            <div class="catalog-container">
+              <img
+                src="/assets/img/casas/images (14).jpeg"
+                alt="perrito"
+                class="product-image"
+              />
+              <p>Kobe</p>
+            </div>
+          </div>
+          <div class="column">
+            <div class="catalog-container">
+              <img
+                src="/assets/img/casas/images (13).jpeg"
+                alt="perrito"
+                class="product-image"
+              />
+              <p>Kobe</p>
+            </div>
+          </div>
+          <div class="column">
+            <div class="catalog-container">
+              <img
+                src="/assets/img/casas/images (12).jpeg"
+                alt="perrito"
+                class="product-image"
+              />
+              <p>Kobe</p>
+            </div>
+          </div>
+          <div class="column">
+            <div class="catalog-container">
+              <img
+                src="/assets/img/casas/images (11).jpeg"
+                alt="perrito"
+                class="product-image"
+              />
+              <p>Kobe</p>
+            </div>
+          </div>
+          <div class="column">
+            <div class="catalog-container">
+              <img
+                src="/assets/img/casas/images (10).jpeg"
+                alt="perrito"
+                class="product-image"
+              />
+              <p>Kobe</p>
+            </div>
+          </div>
+          <div class="column">
+            <div class="catalog-container">
+              <img
+                src="/assets/img/casas/images (9).jpeg"
+                alt="perrito"
+                class="product-image"
+              />
+              <p>Kobe</p>
+            </div>
+          </div>
+          <div class="column">
+            <div class="catalog-container">
+              <img
+                src="/assets/img/casas/images (3).jpeg"
+                alt="perrito"
+                class="product-image"
+              />
+              <p>Kobe</p>
             </div>
           </div>
         </div>
 
         <div class="paginator">
           <ul>
-            <li><a href="#">«</a></li>
+            <li class="border-paginator-left"><a href="#">«</a></li>
             <li><a href="#">1</a></li>
             <li><a href="#">2</a></li>
             <li><a href="#">3</a></li>
-            <li><a href="#">»</a></li>
+            <li class="border-paginator-right"><a href="#">»</a></li>
           </ul>
         </div>
       </main>
-      <footer class="footer-dog">
+      <footer id="footer" class="footer-dog">
         <div class="rrss">
           <i class="fa-brands fa-instagram"></i>
           <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-x-twitter"></i>
+          <i class="fa-brands fa-youtube"></i>
         </div>
         <p>Todos los derechos reservados</p>
       </footer>

@@ -4,6 +4,11 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+h2 {
+  color: #52002a;
+  margin: 16px 0 0 28px;
+}
+
 header.container-menu {
   background-color: #68dfd9;
   grid-area: menu;
@@ -13,11 +18,24 @@ header.container-menu {
   align-items: center;
 }
 
+header.container-menu a {
+  color: black;
+}
+header.container-menu a:hover {
+  color: white;
+  transform: scale(1.2);
+}
+
+header.container-menu li:hover {
+  color: #52002a;
+}
+
 .logo {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  border-bottom: floralwhite;
 }
 
 .logo img {
@@ -29,6 +47,7 @@ main.main-container {
   grid-area: main-container;
   display: flex;
   flex-direction: column;
+  border-bottom: gray;
 }
 
 nav.form {
@@ -46,8 +65,27 @@ main.main-container .product-container {
   justify-content: space-around;
 }
 
+.section-container {
+  background-color: #ffffff;
+}
+
+main.main-container .product-container.section-container-featured {
+  overflow: hidden;
+  background-color: rgb(214, 214, 214);
+  border-radius: 12px;
+}
+
+main.main-container .product-container.section-container-featured .scroller {
+  display: flex;
+  flex-wrap: nowrap;
+  animation: featured-carousel 20s infinite;
+  transition: all 0.5s linear;
+  animation-delay: 5s;
+}
+
 main.main-container .product-container .column {
   width: 100%;
+  min-width: 100%;
 }
 
 main.main-container .catalog-container {
@@ -55,13 +93,27 @@ main.main-container .catalog-container {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08), 0 3px 6px rgba(0, 0, 0, 0.12);
   margin: 20px;
+  transition: filter 0.3s linear;
+  transition: transform 0.3s ease-in, box-shadow 0.3s ease-in;
+  background-color: white;
+  cursor: pointer;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+main.main-container .catalog-container:hover {
+  filter: grayscale(1);
+  transform: scale(1.05);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.12), 0 10px 10px rgba(0, 0, 0, 0.12);
 }
 
 main.main-container .catalog-container .product-image {
   width: 100%;
-  height: auto;
+  height: 150px;
+  object-fit: cover;
+  object-position: center center;
 }
 
 main.main-container .catalog-container button {
@@ -78,27 +130,45 @@ main.main-container .paginator {
   margin: 12px;
 }
 
+main.main-container .paginator li:hover {
+  transform: scale(110%);
+}
+
 main.main-container .paginator ul {
+  background-color: #52002a;
   display: flex;
   margin: 0;
   padding: 0;
+  border-radius: 6px;
 }
 
 main.main-container .paginator a {
   text-decoration: none;
-  color: rgb(227, 91, 214);
+  color: white;
 }
 
 main.main-container .paginator li {
   list-style: none;
-  border: 1px solid black;
+  border: 1px solid white;
   padding: 8px;
+  transition: transform 0.5s linear;
+  cursor: pointer;
+}
+
+main.main-container .paginator li.border-paginator-left {
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+main.main-container .paginator li.border-paginator-right {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
 
 footer.footer-dog {
   background-color: #52002a;
   color: #fff;
   grid-area: footer-dog;
+  z-index: 1;
 }
 
 /*menú*/
@@ -225,6 +295,7 @@ footer p {
   header.container-menu {
     grid-area: menu;
     display: flex;
+    height: auto;
     flex-direction: row;
     padding: 8px;
     align-items: center;
@@ -239,10 +310,14 @@ footer p {
   }
   main.main-container .product-container .column {
     width: 50%;
+    min-width: 50%;
   }
   nav.form {
     display: flex;
     justify-content: flex-start;
+    position: sticky;
+    top: 0;
+    height: 100vh;
   }
 }
 
@@ -256,6 +331,10 @@ footer p {
       "footer-dog main-container";
   }
   header.container-menu {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    max-height: 100vh;
     flex-direction: column;
     justify-content: flex-start;
   }
@@ -265,5 +344,42 @@ footer p {
 
   main.main-container .product-container .column {
     width: 25%;
+    min-width: 25%;
+  }
+}
+
+@keyframes featured-carousel {
+  0% {
+    transform: translateX(0);
+  }
+  10% {
+    transform: translateX(-25%);
+  }
+  20% {
+    transform: translateX(-25%);
+  }
+  30% {
+    transform: translateX(-50%);
+  }
+  40% {
+    transform: translateX(-50%);
+  }
+  50% {
+    transform: translateX(-75%);
+  }
+  60% {
+    transform: translateX(-75%);
+  }
+  70% {
+    transform: translateX(-100%);
+  }
+  80% {
+    transform: translateX(-100%);
+  }
+  90% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(0%);
   }
 }
