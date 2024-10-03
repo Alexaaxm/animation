@@ -338,6 +338,7 @@ footer p {
     flex-direction: column;
     justify-content: flex-start;
   }
+
   header.container-menu ul {
     padding: 0;
   }
